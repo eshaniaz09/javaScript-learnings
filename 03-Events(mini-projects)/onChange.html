@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            background-color: darkblue;
+            text-align: center;
+        }
+        .main-div{
+            position: absolute;
+            top: 50%;
+            left: 28%;
+            color: white;
+            font-size: 30px;
+        }
+        #icecream{
+            height: 30px;
+        }
+        
+        #ice{
+            height: 30px;
+        }
+        #result{
+            font-size: 20px;
+            color: black;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="main-div">
+       <div class="content">
+        <label for="">Your name 👍</label>
+        <input type="text" id="ice">
+        <br>
+        <label for="">Choce your faviourte icecream 😍
+            <select   name="" id="icecream"  >
+               <option value="">Select one </option>
+               <option value="">Choclate </option>
+               <option value="">Vanilla</option>
+               <option value="">pista</option>
+               <option value="">mango</option>
+            </select>
+        </label>
+        <br>
+        <div id="result"></div>
+       </div>
+    </div>
+    <script>
+        // const selectElement = ()=>{
+        //     const changeElement = document.getElementById('ice').value;
+            
+        //     const icecream = document.getElementById('icecream').value;
+        //     const result = document.getElementById('result');
+        //     result.innerHTML = `Miss/sir ${changeElement} select ${icecream} icecream flavour`;
+        // }
+
+const icecream = document.getElementById('icecream');
+icecream.addEventListener('change', () => {
+    const changeElement = document.getElementById('ice').value;
+    const selectedIcecream = document.querySelector("#icecream").value;
+    const result = document.getElementById('result');
+    result.innerHTML = `Miss/sir ${changeElement} select ${selectedIcecream} ice cream flavor`;
+});
+
+
+    </script>
+</body>
+</html>

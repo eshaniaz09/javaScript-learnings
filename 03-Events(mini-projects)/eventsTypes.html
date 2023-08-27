@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            font-family: Arial, Helvetica, sans-serif;
+            background-color: #6F8FAF;
+        }
+        h1{
+            text-align: center;
+            color: white;
+        }
+        .credit{
+            text-align: center;
+            color: gray;
+        }
+        .content{
+            padding-top: 45px;
+            padding-bottom: 20px;
+        }
+        .button_container{
+            width: 176px;
+            margin: 0 auto;
+            margin-top: 30px;
+            padding-top: 40px;
+        }
+        .button_su{
+            overflow: hidden;
+            position: relative;
+            display: inline-block;
+            border-radius: 3px;
+            margin-bottom: 30px;
+            box-shadow: 0px 10px 8px -8px black;
+        }
+        .su_button_circle{
+            background-color: red;
+            border-radius: 1000px;
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 0px;
+            height: 0px;
+            margin-left: 0px;
+            margin-top: 0px;
+            pointer-events: none;
+        }
+        .button_su_inner{
+            display: inline-block;
+            background: rgb(162, 169, 36);
+            color: white;
+            font-size: 16px;
+            font-weight: normal;
+            width: 132px;
+            text-align: center;
+            border-radius: 3px;
+            transition: 400ms;
+            text-decoration: none;
+            padding: 22px;
+            z-index: 100000;
+        }
+        .button_text_container{
+            position: relative;
+            z-index: 100000;
+        }
+        .explode-cirlce{
+            animation: explode 0.5s forwards;
+        }
+        .desplode-cirlce{
+         animation: explode-animation 0.5s forwards;
+         
+        }
+
+    </style>
+</head>
+<body>
+    <div class="content">
+        <h1>Different Events in JavaScript</h1>
+
+        <div class="button_container">
+            <div class="button_su">
+                <span class="su_butto_cirlce">
+                </span>
+                <a href="#" class="button_su_inner" onclick="alert('i am awesome, but No one use me')">
+                <span class="button_text_container">
+                    simple Inline alert()
+                </span>
+                </a>
+            </div>
+        <div class="button_container">
+            <div class="button_su">
+                <span class="su_butto_cirlce">
+                </span>
+                <a href="#" class="button_su_inner" onclick="callingFunction()">
+                <span class="button_text_container">
+                    By calling a function
+                </span>
+                </a>
+            </div>
+        <div class="button_container">
+            <div class="button_su">
+                <span class="su_butto_cirlce">
+                </span>
+                <a href="#" class="button_su_inner" id="thirdWay">
+                <span class="button_text_container">
+                    Inline events
+                </span>
+                </a>
+            </div>
+        <div class="button_container">
+            <div class="button_su">
+                <span class="su_butto_cirlce">
+                </span>
+                <a href="#" class="button_su_inner" id="fourthWay">
+                <span class="button_text_container">
+                    Event Listeners
+                </span>
+                </a>
+            </div>
+        </div>
+    </div>
+    <script>
+
+        // second way writting function
+        const callingFunction = ()=>{
+            alert("Comman ways of using function")
+        }
+        // third way of wrriting a function
+        const thirdWay = document.getElementById('thirdWay');
+        thirdWay.onclick = function(){
+            alert("Comman ways of using function again ")
+        }
+        thirdWay.onclick = function(){
+            console.log("Comman ways of using function again ");
+        }
+        //fouthway of wrriting function
+        const forthWay = document.querySelector('#fourthWay');
+        forthWay.addEventListener('click' , ()=>{
+            alert('i love this way of writing functions')
+        });
+        forthWay.addEventListener('click' , ()=>{
+            console.log('i love this way of writing functions');
+        });
+    </script>
+</body> 
+</html>

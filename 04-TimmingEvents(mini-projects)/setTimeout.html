@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            background-color: darkblue;
+        }
+        p{
+            font-size: large;
+            font-family: 'Courier New', Courier, monospace;
+            color: aliceblue;
+            text-align: center;
+            margin-top: 5%;
+        }
+        #btu{
+            padding: 15px;
+            color: black; 
+            background-color: yellow;
+            align-items: center;
+            margin-left: 45%;
+            border-radius: 2.5px;
+            border: 2px solid yellow;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <div class="main-div">
+        <div>
+            <p>Want to know my name ? 🙋‍♀️</p>
+            <p id="showMyName"></p>
+            <br>
+            <button id="btu"> Click here</button>
+        </div>
+    </div>
+    <script>
+        // const showMyName = document.querySelector('#showMyName');
+        // const btu = document.querySelector('#btu');
+        // const ShowMyName = ()=>{
+        //        showMyName.innerHTML = 'loding... 🤔';
+        //        setTimeout(()=>{
+        //         showMyName.innerHTML = 'esha niaz 😄';
+        //         console.log('esha niaz');
+        //        } , 1000)
+        // }
+        // btu.addEventListener('click' , ShowMyName);
+
+        const showMyName = document.querySelector('#showMyName');
+        const btu = document.querySelector('#btu');
+       btu.addEventListener(("mouseenter") , ()=>{
+           btu.style.backgroundColor = "red"
+       }) 
+       btu.addEventListener(("mouseleave") , ()=>{
+           btu.style.backgroundColor = "pink"
+       })
+
+        const action = ()=>{
+            document.querySelector("#showMyName").innerHTML = "loading... 🤔 ";
+            
+            setTimeout(() =>{
+                document.querySelector("#showMyName").innerHTML = "hey..! my name is esha niaz 😸"
+            } , 2000)
+        }
+
+        btu.addEventListener("click" , action);
+    </script>
+</body>
+</html>

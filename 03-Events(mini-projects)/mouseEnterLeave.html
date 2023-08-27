@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            background-color: blue;
+            
+        }
+
+        #box{
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            border: 2px solid white;
+            padding: 40px;
+            color: black;
+            background-color: aliceblue;
+            border-radius: 3px;
+            cursor: pointer;
+          
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div id="box">
+           
+        </div>
+    </div>
+    <script>
+          const myEnter = document.getElementById('box');
+          myEnter.addEventListener('mouseenter' , ()=>{
+                  myEnter.style.backgroundColor = "red";
+                  console.log("mouse enter bro");
+          })
+          myEnter.addEventListener('mouseleave' , ()=>{
+            myEnter.style.backgroundColor = "pink";
+                  console.log("mouse leave bro");
+          })
+    </script>
+</body>
+</html>

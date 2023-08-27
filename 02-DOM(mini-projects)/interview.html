@@ -1,0 +1,104 @@
+<!-- what is difference between click and addEvent listener -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            background-color: darkblue;
+            margin: 0;
+            padding: 0;
+            font-family: 'Courier New', Courier, monospace;
+            border: none;
+        }
+        p{
+            font-size: 30px;
+            color: aliceblue;
+            position: absolute;
+            top: 10%;
+            left: 10%;
+        }
+        .boxes{
+            position: absolute;
+            top: 40%;
+            left: 46%;
+            color: aliceblue;
+            cursor: pointer;
+        }
+        .box1{
+            background-color: yellow;
+            border: none;
+            font-size: 15px;
+            padding: 10px;
+            margin-bottom: 20px;
+            cursor: pointer;
+        }
+        .box2{
+            background-color: yellow;
+            border: none;
+            font-size: 15px;
+            padding: 10px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <div class="div-main">
+        <p id="line">Difference Between inline Event and Event Listener 🔥</p>
+        <div class="boxes">
+            <button class="box1"  id="box" >Inline Event</button>
+            <br>
+            <button class="box2"  onclick="hello()">Event Listener</button>
+        </div>
+    </div>
+    <script>
+        //  console.log(document.querySelectorAll(".box").innerHTML = "here is the text. please read it");
+        //   function hey() { 
+        //     alert('hey user you double click the button')
+        // }
+        //   function hey2() { 
+        //     alert('hey user only click once time')
+        // }
+   
+        // here ther is the three ways of using onclick event
+        function hello(){
+            alert('ohh Thanks to Allah! there is no error 😄');
+        }
+
+        // const box = document.getElementById('box');
+        // box.onclick =  () =>{
+        //      alert('waoo this is also a good way! you are going very well bro 👍')
+        // }
+
+        //  fourth way
+        //  var box = document.querySelector('#box');
+
+        // const display = ()=>{
+        //     confirm('hey are you like it 😃');
+        //     alert(' why this not working 😠');
+        // }
+        // box.addEventListener('click' , display);
+          
+        const box = document.querySelector('#box');
+        box.addEventListener('mouseenter' , ()=>{
+           box.style.backgroundColor = 'red';
+           console.log("mouse enter");
+
+        })
+
+        
+        box.addEventListener('mouseleave' , ()=>{
+           box.style.backgroundColor = 'green';
+           console.log("mouse leave"); 
+        })
+        box.addEventListener('click' , ()=>{
+           box.style.backgroundColor = 'pink';
+           console.log("mouse leave");
+        })
+
+            </script>
+</body>
+</html>

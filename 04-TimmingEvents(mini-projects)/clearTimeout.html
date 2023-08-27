@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clear Timeout</title>
+    <style>
+        body{
+          border: none;
+          font-family: 'Courier New', Courier, monospace;
+          background-color: darkblue;
+        }
+        .div-main{
+            color: white;
+            display: flex;
+            justify-content: center ;
+           align-items: center;
+           height: 100vh;
+        }
+        p{
+            font-weight: bolder;
+            font-size: larger;
+        }
+        .but{
+            /* width: 20px; */
+            justify-content: center;
+            background-color: yellow;
+            font-size: larger;
+            /* height: 20px; */
+            margin-left: 150px;
+        }
+    </style>
+</head>
+<body>
+    <div class="div-main">
+        <div>
+            <p>Click. Try it . Wait 3 seconds. Yhe page will alert hello</p>
+            <p>click "stop" to prevent the execution of the first function</p>
+            <p>(you must click stop" before the 2 seconds are up. )</p>
+
+            <p id="load"></p>
+
+            <button class="but"  onclick="myVar  = setTimeout(myFunction, 2000) ">Try it</button>
+            <button class="but" onclick="clearTimeout(myVar)">Stop it</button>
+        </div>
+
+    </div>
+    <script>
+
+        // const load = document.querySelector('#load');
+        // const btu = document.querySelector('#btu');
+        // const action = ()=>{
+        //     document.querySelector('#load').innerHTML = "loading.. 🤔";
+        //     setTimeout(() =>{
+        //         alert('hello are you uderstanding javascript well... 😃');
+        //     } , 2000);
+        // };
+
+
+        // btu.addEventListener('click' , action)
+
+        // const end = document.querySelector('#end');
+        // end.addEventListener()
+
+            // const load = document.getElementById('load');
+            // load.innerHTML = "loading... \u231B"
+        function myFunction() {
+
+            alert('hello are you understanding javascript')
+        }
+    </script>
+</body>
+</html>

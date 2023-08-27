@@ -1,0 +1,29 @@
+
+    body {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        margin: 0;
+        background-color: rgb(42, 42, 74);
+        color: aliceblue;
+    }
+
+    /* .container {
+        text-align: center;
+    } */
+
+    .inner-div {
+        display: inline-block;
+    }
+
+    .main-heading {
+        font-size: 100px;
+    }
+
+     /* #temp {
+        display: block;
+        margin-top: 5px;
+         font-size: 18px; 
+     
+     } */

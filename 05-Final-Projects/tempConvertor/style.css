@@ -1,0 +1,47 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Mulish" , sans-serif;
+}
+
+body{
+    width: 100vw;
+    height: 100vh;
+    background-color: #f8e7af;
+    display: grid;
+    place-items: center;
+}
+
+form{
+    background-color: #fab1a0;
+    padding: 80px;
+    align-items: center;
+    text-align: center;
+    width: 50%;
+    height: 40%;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.77);
+    border-radius: 10px;
+}
+
+input{
+    width: 16%;
+    height: 28px;
+    margin-top: 10px;
+}
+select{
+    width: 16%;
+    height: 28px;
+    margin-top: 10px;
+    font-size: 11px;
+    color: rgba(7, 4, 4, 0.819);
+}
+
+#btn{
+    color: white;
+    background-color: black;
+    border: none;
+    margin-bottom: 10px;
+}
+
+

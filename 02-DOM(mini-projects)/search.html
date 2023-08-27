@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            margin: 0px;
+            font-family: 'Courier New', Courier, monospace;
+            background-color: blue;
+            
+        }
+        .para1{
+            text-align: center;
+            font-size: 18px;
+            color: white;
+            margin-top: 28px;
+
+        }
+        .para2{
+            text-align: center;
+            font-size: 20px;
+            color: white;
+            margin-top: 28px;
+
+        }
+        p{
+            text-align: center;
+            font-size: 20px;
+            color: white;
+            margin-top: 28px;
+            
+        }
+        #heading{
+            text-align: center;
+            font-size: 33px;
+            color: white;
+            margin-top: 40px;
+            font-weight: 900;
+            color: rgba(0, 255, 255, 0.924);
+            
+        }
+        .bu{
+            border: none;
+            border-radius: 10px; ;
+            padding: 18px;
+            background-color: yellow;
+            color: black;
+            margin-top: 28px;
+            margin-left: 38rem;
+            cursor: pointer;
+        }
+        .FORM-1{
+            margin-top: 28PX;
+            display: flex;
+            justify-content: center;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <div class="para1 " >plz like this vedio</div>
+    <div class="para2 para">plz share this vedio</div>
+    <p>Don't forget to subscribe my chennel</p>
+    <div id="heading">Change the content of the h1</div>
+
+    <form action="" class="FORM-1">
+        <label for="">MALE</label>
+        <input type="radio" name="gender" id="">
+        <label for="">FEMALE</label>
+        <input type="radio" name="gender" id="">
+        <label for="">HESHE</label>
+        <input type="radio" name="gender" id="">
+    </form>
+
+    <button class="bu" onclick="changeContent()">Click me</button>
+
+    <script>
+        const changeContent = () =>{
+        
+            document.getElementById("heading").innerHTML = "welcome to esha's practicing javascript "
+        // console.log(document.getElementsByClassName('para'));
+        document.querySelector(".para1").innerHTML = "here are you enjoying this lecture ";
+
+        document.querySelector(".para2").innerHTML = "here are you listening me...! ";
+        };
+
+    </script>
+</body>
+</html>

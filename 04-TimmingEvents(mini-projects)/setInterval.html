@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            background-color: darkblue;
+        }
+        p{
+            font-size: large;
+            font-family: 'Courier New', Courier, monospace;
+            color: aliceblue;
+            text-align: center;
+            margin-top: 5%;
+        }
+        #btu{
+            padding: 15px;
+            color: black; 
+            background-color: yellow;
+            align-items: center;
+            margin-left: 45%;
+            border-radius: 2.5px;
+            border: 2px solid yellow;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <div class="main-div">
+        <div>
+            <p>Want to know my name ? 🙋‍♀️</p>
+            <p id="showMyName"></p>
+            <br>
+            <button id="btu"> Click here</button>
+            <button id="btu1"> Stop yr</button>
+        </div>
+    </div>
+<script>
+        const showMyName = document.querySelector('#showMyName');
+    const btu = document.querySelector('#btu');
+    const btu1 = document.querySelector('#btu1');
+
+    let num = 0;
+    let timeref;
+    const ShowMyName = ()=>{
+           showMyName.innerHTML = 'loding... 🤔';
+         timeref =  setInterval(() =>{
+                showMyName.innerHTML = `${num}`
+                num++;
+          } , 1000)
+    }
+    btu.addEventListener('click' , ShowMyName);  
+    btu1.addEventListener('click' , ()=>{
+        clearInterval(timeref);
+        showMyName.innerHTML = "hey..! itz esh... 😄"
+    });
+</script>
+
+</body>
+</html>

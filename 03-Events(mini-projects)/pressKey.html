@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            background-color: darkblue;
+            font-family: 'Courier New', Courier, monospace;
+            text-align: center;
+        }
+        h4{
+            text-align: center;
+            font-weight: 8px;
+            margin-top: 15rem;
+            font-size: larger;
+            color: white;
+        }
+        .effect-1{
+            position: absolute;
+            left: 40%;
+            top: 50%;
+            color:black;
+            width: 15rem;
+            height: auto;
+
+            font-size: 35px;
+        }
+    </style>
+</head>
+<body>
+    <div class="content">
+        <h4>The function is triggered when the user is pressing the key in the input field</h4>
+        <input    type="text" class="effect-1" onkeypress="keyPress()" onkeyup="keyUp()" onkeydown="keyDown()" > 
+        <div id="keys"></div>     
+    </div>
+    <script>
+        // const keyPress = () =>{
+        //     document.getElementById('keys').innerHTML = `you press ${event.key} ans it's code is ${event.code}`;
+        //     console.log(`you press key : ${event.key}`);
+        // }
+        // const keyDown = () =>{
+        //     document.getElementById('keys').innerHTML = `key is down`;
+        //     console.log(`key is down`);
+        // }
+        // const keyUp = () =>{
+        //     document.getElementById('keys').innerHTML = `key is up`;
+        // }
+
+        // function keyPress()  {
+        //     document.getElementById('keys').innerHTML = `you press ${event.key} and its code is ${event.code}`
+        // }
+
+        function keyDown() {
+            document.getElementById('keys').innerHTML = "the key is  pressed"
+        }
+        function keyUp() {
+            document.getElementById('keys').innerHTML = "the key is  leaved"
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,27 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Mulish" , sans-serif;
+}
+
+body{
+    width: 100vw;
+    height: 100vh;
+    background-color: #091955;
+    /* display: grid; */
+    /* place-items: center; */
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    text-align: center;
+ 
+   
+}
+
+.counter{
+    color: rgb(255, 255, 0);
+    font-size: 80px;
+}
+
